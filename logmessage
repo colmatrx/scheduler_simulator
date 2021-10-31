@@ -1,0 +1,145 @@
+OSS: Writes to logfileOSS: Writes to logfileOSS Times out at getTime() from schedulerOSS Times out at getTime() from scheduler
+OSS Times out at getTime() from schedulerOSS: Writes to logfile
+OSS: Writes to logfile
+OSS: Writes to logfile
+OSS: Writes to logfileOSS: User Process 36180 created at time 0 seond and 0 nanosecondOSS: User Process 0 created at time 0 seond and 0 nanosecond
+OSS: User Process 36295 created at time 1 seond and 0 nanosecond
+OSS: User Process 0 created at time 1 seond and 0 nanosecond
+OSS: User Process 36375 created at time 1 seond and 0 nanosecond
+OSS: User Process 0 created at time 1 seond and 0 nanosecond
+OSS: User Process 36481 created at time 1 seond and 0 nanosecond
+OSS: User Process 36528 created at time 1 seond and 0 nanosecond
+OSS: User Process 36644 created at time 1 seond and 0 nanosecond
+OSS: User Process 36747 created at time 1 seond and 0 nanosecond
+OSS: User Process 36850 created at time 1 seond and 0 nanosecond
+OSS: User Process 37355 created at time 1 seond and 0 nanosecond
+OSS: OSS Process 37354 sends message to User Process 37355 at time 2 seond and 0 nanosecond
+OSS: User Process 37650 created at time 1 seond and 0 nanosecond
+OSS: OSS Process 37649 sends message to User Process 37650 at time 2 seconds and 0 nanosecond
+OSS: User Process 37905 created at time 1 seond and 0 nanosecond
+OSS: OSS Process 37904 sends message '5' to User Process 2 at time 0 seconds and 4197921 nanosecond
+OSS: User Process 38085 created at time 1 seond and 0 nanosecond
+OSS: OSS Process 38084 sends message '5' to User Process 2 at time 0 seconds and 4197921 nanosecond
+OSS: User Process 38258 created at time 1 seond and 0 nanosecond
+OSS: OSS Process 38257 sends message '5' to User Process 2 at time 0 seconds and 4197927 nanosecond
+OSS: User Process 38425 created at time 1 seond and 0 nanosecond
+OSS: OSS Process 38424 sends message '5' to User Process 2 at time 0 seconds and 4197953 nanosecond
+OSS: User Process 38716 created at time 1 second and 0 nanosecond
+OSS: OSS Process 38715 sends message '5' to User Process 38716 at time 2 seconds and 0 nanosecond
+OSS: User Process 38834 created at time 1 second and 0 nanosecond
+OSS: OSS Process 38833 sends message '5' to User Process 38834 at time 2 seconds and 0 nanosecond
+OSS: User Process 38982 created at time 1 second and 0 nanosecond
+OSS: OSS Process 38981 sends message '5' to User Process 38982 at time 2 seconds and 0 nanosecond
+OSS: User Process 39092 created at time 1 second and 0 nanosecond
+OSS: OSS Process 39091 sends message '10' to User Process 39092 at time 2 seconds and 0 nanosecond
+OSS: User Process 39761 created at time 1 second and 0 nanosecond
+OSS: OSS Process 39760 sends message '10' to User Process 39761 at time 2 seconds and 0 nanosecond
+OSS: User Process 39847 created at time 1 second and 0 nanosecond
+OSS: OSS Process 39846 sends message '10' to User Process 39847 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 39846 receives message '0' from User Process 38085 at time 3 seconds and 0 nanosecond
+OSS: User Process 40009 created at time 1 second and 0 nanosecond
+OSS: OSS Process 40008 sends message '10' to User Process 40009 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 40008 receives message '0' from User Process 38258 at time 3 seconds and 0 nanosecond
+OSS: User Process 40190 created at time 1 second and 0 nanosecond
+OSS: OSS Process 40189 sends message '10' to User Process 40190 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 40189 receives message '0' from User Process 38425 at time 3 seconds and 0 nanosecond
+OSS: User Process 40632 created at time 1 second and 0 nanosecond
+OSS: OSS Process 40631 sends message '10' to User Process 40632 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 40631 receives message '0' from User Process 21474875196 at time 3 seconds and 0 nanosecond
+OSS: User Process 40748 created at time 1 second and 0 nanosecond
+OSS: OSS Process 40747 sends message '10' to User Process 40748 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 40747 receives message '0' from User Process 40748 at time 3 seconds and 0 nanosecond
+OSS: User Process 41007 created at time 1 second and 0 nanosecond
+OSS: OSS Process 41006 sends message '10' to User Process 41007 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 41006 receives message '1' from User Process 39761 at time 3 seconds and 0 nanosecond
+OSS: User Process 41243 created at time 1 second and 0 nanosecond
+OSS: OSS Process 41242 sends message '10' to User Process 41243 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 41242 receives message '7' from User Process 41243 at time 3 seconds and 0 nanosecond
+OSS: User Process 41357 created at time 1 second and 0 nanosecond
+OSS: OSS Process 41356 sends message '10' to User Process 41357 at time 2 seconds and 0 nanosecond
+OSS: User Process 41561 created at time 1 second and 0 nanosecond
+OSS: OSS Process 41560 sends message '10' to User Process 41561 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 41560 receives message '2' from User Process 41561 at time 3 seconds and 0 nanosecond
+OSS: User Process 42004 created at time 1 second and 0 nanosecond
+OSS: OSS Process 42003 sends message '10' to User Process 42004 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 42003 receives message '1' from User Process 42004 at time 3 seconds and 0 nanosecond
+OSS: User Process 42116 created at time 1 second and 0 nanosecond
+OSS: OSS Process 42115 sends message '10' to User Process 42116 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 42115 receives message '4' from User Process 42116 at time 3 seconds and 0 nanosecond
+OSS: User Process 42763 created at time 1 second and 0 nanosecond
+OSS: OSS Process 42762 sends message '10' to User Process 42763 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 42762 receives message '3' from User Process 42763 at time 3 seconds and 0 nanosecond
+Message Queue ID 3 has been removed at time 4 seconds and 0 nanoseconds.
+
+OSS: User Process 43054 created at time 1 second and 0 nanosecond
+OSS: OSS Process 43053 sends message '10' to User Process 43054 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 43053 receives message '10' from User Process 43054 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 4 has been removed at time 4 seconds and 0 nanoseconds.
+
+OSS: User Process 43146 created at time 1 second and 0 nanosecond
+OSS: OSS Process 43145 sends message '10' to User Process 43146 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 43145 receives message '3' from User Process 43146 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 5 has been removed at time 4 seconds and 0 nanoseconds.
+
+OSS: User Process 43262 created at time 1 second and 0 nanosecond
+OSS: OSS Process 43261 sends message '10' to User Process 43262 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 43261 receives message '3' from User Process 43262 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 6 has been removed at time 4 seconds and 0 nanoseconds.
+
+OSS: User Process 43571 created at time 1 second and 0 nanosecond
+OSS: OSS Process 43570 sends message '10' to User Process 43571 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 43570 receives message '3' from User Process 43571 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 7 has been removed at time 4 seconds and 0 nanoseconds.
+
+OSS: User Process 43769 created at time 1 second and 0 nanosecond
+OSS: OSS Process 43768 sends message '10' to User Process 43769 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 43768 receives message '3' from User Process 43769 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 8 has been removed at time 4 seconds and 0 nanoseconds.
+
+Shared Memory ID 557094 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+
+OSS: User Process 43902 created at time 1 second and 0 nanosecond
+OSS: OSS Process 43901 sends message '10' to User Process 43902 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 43901 receives message '10' from User Process 43902 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 9 has been removed at time 4 seconds and 0 nanoseconds.
+
+OSS: Shared Memory ID 557104 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+
+OSS: User Process 44074 created at time 1 second and 0 nanosecond
+OSS: OSS Process 44073 sends message '10' to User Process 44074 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 44073 receives message '10' from User Process 44074 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 10 has been removed at time 4 seconds and 0 nanoseconds.
+
+OSS: Shared Memory ID 557105 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+
+OSS: User Process 44264 created at time 1 second and 0 nanosecond
+OSS: OSS Process 44263 sends message '10' to User Process 44264 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 44263 receives message '9' from User Process 44264 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 11 has been removed at time 4 seconds and 0 nanoseconds.
+
+OSS: User Process 44341 created at time 1 second and 0 nanosecond
+OSS: OSS Process 44340 sends message '10' to User Process 44341 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 44340 receives message '5' from User Process 44341 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 12 has been removed at time 4 seconds and 0 nanoseconds.
+
+OSS: Shared Memory ID 557111 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+
+OSS: User Process 44484 created at time 1 second and 0 nanosecond
+OSS: OSS Process 44483 sends message '10' to User Process 44484 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 44483 receives message '10' from User Process 44484 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 13 has been removed at time 4 seconds and 0 nanoseconds.
+
+OSS: Shared Memory ID 557112 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+
+OSS: User Process 44591 created at time 1 second and 0 nanosecond
+OSS: OSS Process 44590 sends message '10' to User Process 44591 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 44590 receives message '5' from User Process 44591 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 14 has been removed at time 4 seconds and 0 nanoseconds.
+
+OSS: Shared Memory ID 557113 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+
+OSS: User Process 44719 created at time 1 second and 0 nanosecond
+OSS: OSS Process 44718 sends message '10' to User Process 44719 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 44718 receives message '2' from User Process 44719 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 15 has been removed at time 4 seconds and 0 nanoseconds.
+OSS: Shared Memory ID 589826 has been detached and deleted at time 4 seconds and 15 nanoseconds.
