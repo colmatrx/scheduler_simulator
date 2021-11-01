@@ -143,3 +143,79 @@ OSS: OSS Process 44718 sends message '10' to User Process 44719 at time 2 second
 OSS: OSS Process 44718 receives message '2' from User Process 44719 at time 3 seconds and 0 nanosecond
 OSS: Message Queue ID 15 has been removed at time 4 seconds and 0 nanoseconds.
 OSS: Shared Memory ID 589826 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+
+OSS: User Process 47935 created at time 1 second and 0 nanosecond
+OSS: OSS Process 47934 sends message '10' to User Process 47935 at time 2 seconds and 0 nanosecond
+OSS: User Process 48184 created at time 1 second and 0 nanosecond
+OSS: OSS Process 48183 sends message '10' to User Process 48184 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 48183 receives runtime of '10' nanoseconds from User Process 48184 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 17 has been removed at time 4 seconds and 0 nanoseconds.
+OSS: Shared Memory ID 655391 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+
+OSS: User Process 48495 created at time 1 second and 0 nanosecond
+OSS: OSS Process 48494 sends message '10' to User Process 48495 at time 2 seconds and 0 nanosecond
+OSS: User Process 48739 created at time 1 second and 0 nanosecond
+OSS: OSS Process 48738 sends message '10' to User Process 48739 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 48738 receives runtime of '10' nanoseconds from User Process 48739 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 19 has been removed at time 4 seconds and 0 nanoseconds.
+OSS: Shared Memory ID 655399 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+
+OSS: User Process 48857 created at time 1 second and 0 nanosecond
+OSS: OSS Process 48856 sends message '10' to User Process 48857 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 48856 receives runtime of '3' nanoseconds from User Process 48857 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 20 has been removed at time 4 seconds and 0 nanoseconds.
+OSS: Shared Memory ID 655406 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+
+OSS: User Process 48981 created at time 1 second and 0 nanosecond
+OSS: OSS Process 48980 sends message '10' to User Process 48981 at time 2 seconds and 0 nanosecond
+OSS: User Process 49127 created at time 1 second and 0 nanosecond
+OSS: OSS Process 49126 sends message '10' to User Process 49127 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 49126 receives runtime of '7' nanoseconds from User Process 49127 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 22 has been removed at time 4 seconds and 0 nanoseconds.
+OSS: Shared Memory ID 655408 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+
+OSS: User Process 0 created at time 1 second and 0 nanosecond
+OSS: OSS Process 49909 sends message '10' to User Process 0 at time 2 seconds and 0 nanosecond
+OSS: User Process 50976 created at time 1 second and 0 nanosecond
+OSS: OSS Process 50975 sends message '10' to User Process 50976 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 50975 receives runtime of '3' nanoseconds from User Process 50976 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 24 has been removed at time 4 seconds and 0 nanoseconds.
+OSS: Process Table Shared Memory ID 688168 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+
+OSS: Shared Memory ID 688169 has been detached and deleted at time 5 seconds and 15 nanoseconds.
+
+OSS: User Process 51250 created at time 1 second and 0 nanosecond
+OSS: OSS Process 51249 sends message '10' to User Process 51250 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 51249 receives runtime of '3' nanoseconds from User Process 51250 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 25 has been removed at time 4 seconds and 0 nanoseconds.
+OSS: Process Table Shared Memory ID 688189 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+OSS: OSS Clock Shared Memory ID 688190 has been detached and deleted at time 5 seconds and 15 nanoseconds.
+
+OSS: User Process 51357 created at time 1 second and 0 nanosecond
+OSS: OSS Process 51356 sends time quantum '10' nanoseconds to User Process 51357 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 51356 receives runtime of '10' nanoseconds from User Process 51357 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 26 has been removed at time 4 seconds and 0 nanoseconds.
+OSS: Process Table Shared Memory ID 720910 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+OSS: OSS Clock Shared Memory ID 720916 has been detached and deleted at time 5 seconds and 15 nanoseconds.
+
+OSS: User Process 51457 created at time 1 second and 0 nanosecond
+OSS: OSS Process 51456 sends time quantum '10' nanoseconds to User Process 51457 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 51456 receives runtime of '10' nanoseconds from User Process 51457 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 27 has been removed at time 4 seconds and 0 nanoseconds.
+OSS: Process Table Shared Memory ID 720919 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+OSS: OSS Clock Shared Memory ID 720926 has been detached and deleted at time 5 seconds and 15 nanoseconds.
+
+OSS: User Process 51523 created at time 1 second and 0 nanosecond
+OSS: OSS Process 51522 sends time quantum '10' nanoseconds to User Process 51523 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 51522 receives runtime of '5' nanoseconds from User Process 51523 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 28 has been removed at time 4 seconds and 0 nanoseconds.
+OSS: Process Table Shared Memory ID 720927 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+OSS: OSS Clock Shared Memory ID 720928 has been detached and deleted at time 5 seconds and 15 nanoseconds.
+
+OSS: User Process 51723 created at time 1 second and 0 nanosecond
+OSS: OSS Process 51722 sends time quantum 10 nanoseconds to User Process 51723 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 51722 receives runtime of 5 nanoseconds from User Process 51723 at time 3 seconds and 0 nanosecond
+OSS: Message Queue ID 29 has been removed at time 4 seconds and 0 nanoseconds.
+OSS: Process Table Shared Memory ID 720932 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+OSS: OSS Clock Shared Memory ID 720933 has been detached and deleted at time 5 seconds and 15 nanoseconds.
+OSS: OSS suucessfully completed execution at 6 seconds and 15 nanoseconds

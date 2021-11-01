@@ -19,10 +19,14 @@ void initclock(void);   //function to initialize the two clocks in shared memory
 
 void cleanup(void);
 
+void createprocess(long int);
+
+int randomtime(int, int);
+
 char *logfilename; // = "mess"; to save the log file name passed on the cmd line.
 
-int ossclockid; unsigned int *ossclockaddress, *osstimeseconds, *osstimenanoseconds;
-int messageqid; char logstring[1024];
+int ossclockid, processtableid; unsigned int *ossclockaddress, *osstimeseconds, *osstimenanoseconds;
+int messageqid; char logstring[1024]; int processcount = 0;
 
 struct msg {
 
@@ -32,12 +36,26 @@ struct msg {
 
 struct msg message; 
 
+//Process Control Block Data Structure
+
+typedef struct processes{
+    
+    long int processid;
+    int timeqused;
+    int timeqleft;
+    int priority;
+} process;
+
+process userprocess[18]; //Array representing Process Control Tab
+process *processtableaddress;
 
 int main(int argc, char *argv[]){
 
     int option; //for tracking the command line argument provided
     int oss_run_timeout = oss_wait_timeout; //time before oss times out and kill all processes and exit. should be handled in signal handler
-    long int userprocessid;
+    long int userprocessid; int ossofflinesecondclock, ossofflinenanosecondclock;
+
+    processtableid = shmget(processtablekey, (sizeof(process)*18), IPC_CREAT|0766); //create a shared memory 
 
     ossclockid = shmget(ossclockkey, 8, IPC_CREAT|0766);//getting the oss clock shared memory clock before initializing it so that the id can become available to the child processes
     if (ossclockid == -1){  //checking if shared memory id was successfully created
@@ -117,36 +135,85 @@ int main(int argc, char *argv[]){
     if (userprocessid == 0){
 
         //inside user process
-        struct msg usermessage; int messageid;
+        struct msg usermessage; int messageid; int runtime; int processindex; process *proctableaddress;
     
         messageid = msgget(messageqkey, 0); //returns the key of an existing message queue
         printf("\nuser process id is %d\n", getpid());
         msgrcv(messageid, &usermessage, sizeof(usermessage), getpid(), 0); //receives a message type where mtype is the user process id
         printf("\nIn user process, message type received from OSS is %d and message content is %d\n", usermessage.msgtype, usermessage.msgcontent);
-        usermessage.msgcontent = 2; usermessage.msgtype = getpid(); //sets the usermessage before sending it to OSS
+
+        //get process index from the process control table
+
+        proctableaddress = shmat(processtableid, NULL, 0); //attach to the process table shared memory
+
+        if (proctableaddress == (void *) -1){
+
+            perror("\noss: Error: In user process, proc table address shmat() failed");
+            exit(1);
+        }
+
+        for (int i = 0; i < 18; i++){       //traverse the process table to locate the user process index
+            if (((proctableaddress+i)->processid) == (getpid())){
+                printf("\nuser process id from process table is %d", (proctableaddress+i)->processid);
+                printf("\nuser process time left from process table is %d", (proctableaddress+i)->timeqleft);
+                processindex = i;
+                break;
+            }
+        }
+        
+        runtime = randomtime(0, (proctableaddress+processindex)->timeqleft); //generate random time between 0 and time left unused
+
+        printf("\nruntime is %d\n", runtime);
+
+        usermessage.msgcontent = runtime; usermessage.msgtype = getpid(); //sets the usermessage before sending it to OSS
         msgsnd(messageid, &usermessage, sizeof(usermessage), IPC_NOWAIT); //sends a message back to OSS
+
+        if ((shmdt(proctableaddress)) == -1){    //detaching from the process table shared memory
+
+            perror("\noss: Error: In user process() section, process table shmdt()) failed. process table shared memory cannot be detached");
+            exit(1);
+        }
         
         return 0;
     }
 
+    processcount = processcount + 1; //incrememt to track the total processes in the system; maximum allowed is 18
+
+    processtableaddress = shmat(processtableid, NULL, 0); //shmat returns the address of the shared memory
+
+    if (processtableaddress == (void *) -1){
+
+        perror("\noss: Error: In main, process table address shmat() failed");
+        exit(1);
+
+    }
+
+    (processtableaddress+(processcount-1))->processid = userprocessid; //access each structure elements in the process table kept in shared memory
+    (processtableaddress+(processcount-1))->timeqleft = 10;
+    (processtableaddress+(processcount-1))->timeqused = 0;
+    (processtableaddress+(processcount-1))->priority = 0;
+
+    printf("\nattached processid is %d\n", (processtableaddress+(processcount-1))->processid);
+
     printf("\nOSS process ID is %d\n", getpid());
 
-    snprintf(logstring, sizeof(logstring), "\nOSS: User Process %d created at time %d second and %d nanosecond", userprocessid, *osstimeseconds, *osstimenanoseconds);
+    snprintf(logstring, sizeof(logstring), "\nOSS: User Process %d created at time %d second and %d nanosecond", (processtableaddress+(processcount-1))->processid, *osstimeseconds, *osstimenanoseconds);
 
     logmsg(logfilename, logstring); //write logstring above to log file
 
     *osstimeseconds = *osstimeseconds + 1; //increment oss clock by 1 second
 
-    message.msgtype = userprocessid; //sends a message where the mtype is the user process id
-    message.msgcontent = 10;
+    message.msgtype = (processtableaddress+(processcount-1))->processid; //sends a message where the mtype is the user process id
+    printf("\nOSS sends message type %d\n", message.msgtype);
+    message.msgcontent = (processtableaddress+(processcount-1))->timeqleft;
     msgsnd(messageqid, &message, sizeof(message), IPC_NOWAIT);
 
-    snprintf(logstring, sizeof(logstring), "\nOSS: OSS Process %d sends message '%d' to User Process %d at time %d seconds and %d nanosecond", getpid(), message.msgcontent, userprocessid, *osstimeseconds, *osstimenanoseconds);
+    snprintf(logstring, sizeof(logstring), "\nOSS: OSS Process %d sends time quantum %d nanoseconds to User Process %d at time %d seconds and %d nanosecond", getpid(), message.msgcontent, message.msgtype, *osstimeseconds, *osstimenanoseconds);
     logmsg(logfilename, logstring);
 
     *osstimeseconds = *osstimeseconds + 1; //increment oss clock by 1 second
     msgrcv(messageqid, &message, sizeof(message), 0, 0);
-    snprintf(logstring, sizeof(logstring), "\nOSS: OSS Process %d receives message '%d' from User Process %d at time %d seconds and %d nanosecond", getpid(), message.msgcontent, message.msgtype, *osstimeseconds, *osstimenanoseconds);
+    snprintf(logstring, sizeof(logstring), "\nOSS: OSS Process %d receives runtime of %d nanoseconds from User Process %d at time %d seconds and %d nanosecond", getpid(), message.msgcontent, message.msgtype, *osstimeseconds, *osstimenanoseconds);
     logmsg(logfilename, logstring);
 
     *osstimeseconds = *osstimeseconds + 1;
@@ -155,24 +222,50 @@ int main(int argc, char *argv[]){
 
     cleanup(); //called to free up Message Queue
 
-    snprintf(logstring, sizeof(logstring), "\nOSS: Shared Memory ID %d has been detached and deleted at time %d seconds and %d nanoseconds.\n", ossclockid, *osstimeseconds, *osstimenanoseconds);
+    if ((shmdt(processtableaddress)) == -1){    //detaching from the process table shared memory
+
+        perror("\noss: Error: In cleanup() section, process table shmdt()) failed. process table shared memory cannot be detached");
+        exit(1);
+    }
+
+    printf("\nprocess table shared memory was detached.\n");
+
+    if (shmctl(processtableid, IPC_RMID, NULL) != 0){      //shmctl() marks the oss process table shared memory for destruction so it can be deallocated from memory after no process is using it
+        perror("\noss: Error: In cleanup() section, process table shmctl() call failed. Segment cannot be marked for destruction\n"); //error checking shmctl() call
+        exit(1);
+    }
+
+    printf("\nprocess table shared memory was deleted.\n\n");
+
+    snprintf(logstring, sizeof(logstring), "\nOSS: Process Table Shared Memory ID %d has been detached and deleted at time %d seconds and %d nanoseconds.", processtableid, *osstimeseconds, *osstimenanoseconds);
     logmsg(logfilename, logstring);
 
-    if ((shmdt(ossclockaddress)) == -1){
+    *osstimeseconds = *osstimeseconds + 1; //increment oss clock by 1 second
 
-        perror("\noss: Error: In cleanup(), shmdt()) failed. Shared memory cannot be detached in initclock()");
+    ossofflinesecondclock = *osstimeseconds;
+    ossofflinenanosecondclock = *osstimenanoseconds;
+
+    snprintf(logstring, sizeof(logstring), "\nOSS: OSS Clock Shared Memory ID %d has been detached and deleted at time %d seconds and %d nanoseconds.", ossclockid, *osstimeseconds, *osstimenanoseconds);
+    logmsg(logfilename, logstring);
+
+    if ((shmdt(ossclockaddress)) == -1){    //detaching from the oss clock shared memory
+
+        perror("\noss: Error: In cleanup() section, shmdt()) failed. OSS clock address shared memory cannot be detached");
         exit(1);
     }
 
     printf("\nOSS clock shared memory was detached.\n");
 
     if (shmctl(ossclockid, IPC_RMID, NULL) != 0){      //shmctl() marks the oss clock shared memory for destruction so it can be deallocated from memory after no process is using it
-        perror("\noss: Error: In cleanup(), shmctl() call failed. Segment cannot be marked for destruction\n"); //error checking shmctl() call
+        perror("\noss: Error: In cleanup() section, OSS clockid shmctl() call failed. Segment cannot be marked for destruction\n"); //error checking shmctl() call
         exit(1);
     }
 
     printf("\nOSS clock shared memory was deleted.\n\n");
-    
+
+    snprintf(logstring, sizeof(logstring), "\nOSS: OSS suucessfully completed execution at %d seconds and %d nanoseconds\n", ossofflinesecondclock + 1, ossofflinenanosecondclock);
+    logmsg(logfilename, logstring);
+
     return 0;
 
 
@@ -207,7 +300,16 @@ void initclock(void){ //initializes the seconds and nanoseconds parts of the oss
 
 }
 
-void cleanup(void){
+int randomtime(int lowertimelimit, int uppertimelimit){
+
+    int randsec;
+    srand(time(NULL));          //initilize the rand function
+    randsec = (rand() % ((uppertimelimit - lowertimelimit) + 1)) + lowertimelimit; //this logic produces a number between lowertimelit and uppertimelimit
+    return randsec;
+
+}
+
+void cleanup(void){ //cleans up the message queue
 
     printf("\nCleaning up used resources....\n");
 
