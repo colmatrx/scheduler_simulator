@@ -3,4 +3,5 @@
 #define processtablekey 110221 
 #define ossclockkey 1980725
 #define messageqkey 1302456
+#define pcbsemaphorekey 202015
 void logmsg(char *filename, const char *msg);
