@@ -15,7 +15,7 @@
 
 void timeouthandler(int sig);   //timeout handler function declaration
 
-void siginthandler(int);
+void siginthandler(int);    //handles Ctrl+C interrupt
 
 void initclock(void);   //function to initialize the two clocks in shared memory
 
@@ -132,6 +132,7 @@ int main(int argc, char *argv[]){
     if (userprocessid < 0){
 
         perror("\noss: Error: user process creation failed!");
+        cleanup();
         exit(1);
     }
 
@@ -142,61 +143,91 @@ int main(int argc, char *argv[]){
     
         messageid = msgget(messageqkey, 0); //returns the key of an existing message queue
         printf("\nuser process id is %d\n", getpid());
-        msgrcv(messageid, &usermessage, sizeof(usermessage), getpid(), 0); //receives a message type where mtype is the user process id
-        printf("\nIn user process, message type received from OSS is %d and message content is %d\n", usermessage.msgtype, usermessage.msgcontent);
-
-        //get process index from the process control table
 
         proctableaddress = shmat(processtableid, NULL, 0); //attach to the process table shared memory
 
-        if (proctableaddress == (void *) -1){
+        if (proctableaddress == (void *) -1){   //error checking shared memory attachment
 
             perror("\noss: Error: In user process, proc table address shmat() failed");
             exit(1);
-        }
+        }  
 
-        for (int i = 0; i < 18; i++){       //traverse the process table to locate the user process index
-            if (((proctableaddress+i)->processid) == (getpid())){
-                printf("\nuser process id from process table is %d", (proctableaddress+i)->processid);
-                printf("\nuser process time left from process table is %d", (proctableaddress+i)->timeqleft);
-                processindex = i;
+        while (1){
+            sleep(2);
+
+            msgrcv(messageid, &usermessage, sizeof(usermessage), getpid(), 0); //receives a message type where mtype is the user process id
+
+            printf("\nIn user process, message type received from OSS is %d and message content is %d\n", usermessage.msgtype, usermessage.msgcontent);
+
+            //get process index from the process control table
+
+            for (int i = 0; i < 18; i++){       //traverse the process table to locate the user process index
+                if (((proctableaddress+i)->processid) == (getpid())){
+                    printf("\nuser process id from process table is %d", (proctableaddress+i)->processid);
+                    printf("\nuser process time left from process table is %d", (proctableaddress+i)->timeqleft);
+                    processindex = i;
+                    break;
+                }
+            }
+
+            runtime = randomtime(1, usermessage.msgcontent); //generate random time between 0 and time left unused sent over by oss        
+
+            if (runtime == usermessage.msgcontent){
+
+                printf("\nIn user process, runtime is %d", runtime);
+                usermessage.msgtype = getpid(); usermessage.msgcontent = 0; //sets the message to send back to oss that it used all of its time quantum
+                (proctableaddress+processindex)->timeqused = runtime; //writes the time used into process control block
+            }
+
+            if (runtime == 1){  //process terminates if runtime is 1
+
+                printf("\nIn user process, runtime is %d", runtime);
+                usermessage.msgtype = getpid(); usermessage.msgcontent = 1; //tell oss it is done executing and clear the process control block before terminating
+                (proctableaddress+processindex)->processid = 0;
+                (proctableaddress+processindex)->timeqused = 1;
+                (proctableaddress+processindex)->timeqleft = 0;
+                (proctableaddress+processindex)->priority = 0;
+                msgsnd(messageid, &usermessage, sizeof(usermessage), IPC_NOWAIT); //sends a message back to OSS
                 break;
             }
+
+            if ((runtime > 1) && (runtime < usermessage.msgcontent)){
+
+                printf("\nIn user process, runtime is %d", runtime);
+                usermessage.msgtype = getpid(); usermessage.msgcontent = 2; //sends 2 to oss to inform it that it only uses part of its execution time
+                (proctableaddress+processindex)->timeqused = runtime; //wrtie the time used in the process control block
+            }
+
+            msgsnd(messageid, &usermessage, sizeof(usermessage), IPC_NOWAIT); //sends a message back to OSS
         }
-        
-        runtime = randomtime(0, (proctableaddress+processindex)->timeqleft); //generate random time between 0 and time left unused
-
-        printf("\nruntime is %d\n", runtime);
-
-        usermessage.msgcontent = runtime; usermessage.msgtype = getpid(); //sets the usermessage before sending it to OSS
-        msgsnd(messageid, &usermessage, sizeof(usermessage), IPC_NOWAIT); //sends a message back to OSS
 
         if ((shmdt(proctableaddress)) == -1){    //detaching from the process table shared memory after readig from it
 
-            perror("\noss: Error: In user process() section, process table shmdt()) failed. process table shared memory cannot be detached");
-            exit(1);
-        }
-        
-        return 0;
+                perror("\noss: Error: In user process() section, process table shmdt()) failed. process table shared memory cannot be detached");
+                exit(1);
+            }
+
+        return 0; //end of process execution
     }
 
-    signal(SIGINT, siginthandler); //handles Ctrl+C signal inside OSS only
-
-    processcount = processcount + 1; //incrememt to track the total processes in the system; maximum allowed is 18
+    //Implement OSS logic here
 
     processtableaddress = shmat(processtableid, NULL, 0); //shmat returns the address of the shared memory
 
-    if (processtableaddress == (void *) -1){
+    if (processtableaddress == (void *) -1){    //error checking shmat() call
 
-        perror("\noss: Error: In main, process table address shmat() failed");
-        exit(1);
+            perror("\noss: Error: In main, process table address shmat() failed");
+            cleanup();
+            exit(1);
 
-    }
+        }
 
-    (processtableaddress+(processcount-1))->processid = userprocessid; //access each structure elements in the process table kept in shared memory
-    (processtableaddress+(processcount-1))->timeqleft = 10;
-    (processtableaddress+(processcount-1))->timeqused = 0;
-    (processtableaddress+(processcount-1))->priority = 0;
+    processcount = processcount + 1; //incrememt to track the total processes in the system; maximum allowed is 18
+
+    (processtableaddress+(processcount - 1))->processid = userprocessid; //access each structure elements in the process table kept in shared memory
+    (processtableaddress+(processcount - 1))->timeqleft = 10;
+    (processtableaddress+(processcount - 1))->timeqused = 0;
+    (processtableaddress+(processcount - 1))->priority = 0;
 
     printf("\nattached processid is %d\n", (processtableaddress+(processcount-1))->processid);
 
@@ -215,21 +246,77 @@ int main(int argc, char *argv[]){
 
     snprintf(logstring, sizeof(logstring), "\nOSS: OSS Process %d sends time quantum %d nanoseconds to User Process %d at time %d seconds and %d nanosecond", getpid(), message.msgcontent, message.msgtype, *osstimeseconds, *osstimenanoseconds);
     logmsg(logfilename, logstring);
+   
+    signal(SIGINT, siginthandler); //handles Ctrl+C signal inside OSS only     
 
-    *osstimeseconds = *osstimeseconds + 1; //increment oss clock by 1 second
-    msgrcv(messageqid, &message, sizeof(message), 0, 0);
-    snprintf(logstring, sizeof(logstring), "\nOSS: OSS Process %d receives runtime of %d nanoseconds from User Process %d at time %d seconds and %d nanosecond", getpid(), message.msgcontent, message.msgtype, *osstimeseconds, *osstimenanoseconds);
-    logmsg(logfilename, logstring);
+    while(1){     
+        
+        int i, pidindex;
 
-    *osstimeseconds = *osstimeseconds + 1;
+        sleep(2);
+
+        msgrcv(messageqid, &message, sizeof(message), 0, 0);
+
+        for (i = 0; i < 18; i++){       //traverse the process table to locate the user process index
+            if (((processtableaddress+i)->processid) == (message.msgtype)){
+                pidindex = i;
+                *osstimenanoseconds = *osstimenanoseconds + ((processtableaddress+pidindex)->timeqused); //increment the clock by the process execution time
+                break;
+            }
+        }
+
+        if ((message.msgcontent) == 1){ //user process ran for 1ns and terminated
+
+            snprintf(logstring, sizeof(logstring), "\nOSS: User Process %d ran for %d nanoseconds at time %d seconds and %d nanosecond", message.msgtype, ((processtableaddress+pidindex)->timeqused), *osstimeseconds, *osstimenanoseconds);
+            logmsg(logfilename, logstring);
+
+            snprintf(logstring, sizeof(logstring), "\nOSS: User Process %d completed execution at time %d seconds; %d nanoseconds", message.msgtype, *osstimeseconds, *osstimenanoseconds+1);
+            logmsg(logfilename, logstring);
+            break;
+        }
+
+        if ((message.msgcontent) == 0){ //user process used all its time but still running
+
+            snprintf(logstring, sizeof(logstring), "\nOSS: User Process %d ran for %d nanoseconds at time %d seconds and %d nanosecond", message.msgtype, ((processtableaddress+pidindex)->timeqused), *osstimeseconds, *osstimenanoseconds+10);
+            logmsg(logfilename, logstring);
+
+            ((processtableaddress+pidindex)->timeqleft) = 10;
+            message.msgcontent = ((processtableaddress+pidindex)->timeqleft); //sets the next time quantum to 10ns
+            snprintf(logstring, sizeof(logstring), "\nOSS: User Process %d used all its time quantum; will get all 10 nanoseconds at the next run", message.msgtype);
+            logmsg(logfilename, logstring);
+            
+        }
+
+        if ((message.msgcontent) == 2){ //where process uses part of its time
+
+            snprintf(logstring, sizeof(logstring), "\nOSS: User Process %d ran for %d nanoseconds at time %d seconds and %d nanosecond", message.msgtype, ((processtableaddress+pidindex)->timeqused), *osstimeseconds, *osstimenanoseconds+((processtableaddress+pidindex)->timeqused));
+            logmsg(logfilename, logstring);
+
+            ((processtableaddress+pidindex)->timeqleft) = ((processtableaddress+pidindex)->timeqleft) - ((processtableaddress+pidindex)->timeqused); //calculate the time quantum balance for the user process
+            message.msgcontent = ((processtableaddress+pidindex)->timeqleft); //sets the next time quantum to time left unused
+            snprintf(logstring, sizeof(logstring), "\nOSS: User Process %d used only part of its time quantum; it is considered block; will get %d nanoseconds at the next run", message.msgtype, (processtableaddress+pidindex)->timeqleft);
+            logmsg(logfilename, logstring);   
+            sleep(message.msgcontent);
+            *osstimeseconds = *osstimeseconds + message.msgcontent;
+        }
+
+        *osstimeseconds = *osstimeseconds + 1;
+
+        //snprintf(logstring, sizeof(logstring), "\nOSS: OSS Process %d sending time quantum %d to User Process %d at time %d seconds; %d nanoseconds", getpid(), message.msgcontent, message.msgtype, *osstimeseconds, *osstimenanoseconds+35);
+        //logmsg(logfilename, logstring);
+
+        msgsnd(messageqid, &message, sizeof(message), IPC_NOWAIT);
+
+    }
 
     //Clean Up Block....Message queues and Shared Memory are freed here
 
     cleanup(); //called to free up Message Queue and Delete Share Memories
 
+    snprintf(logstring, sizeof(logstring), "\nOSS: OSS successfully completed execution at time %d seconds and %d nanseconds.", ossofflinesecondclock, ossofflinenanosecondclock);
+    logmsg(logfilename, logstring);
+
     return 0;
-
-
 }
 
 
@@ -327,9 +414,8 @@ void cleanup(void){ //cleans up the message queue
 
         printf("\nMessage Queue ID %d has been removed.\n", messageqid);
 
-        snprintf(logstring, sizeof(logstring), "\nOSS: Cleaning up used resources...\nOSS: Message Queue ID %d has been removed at time %d seconds and %d nanoseconds.", messageqid, *osstimeseconds, *osstimenanoseconds);
+        snprintf(logstring, sizeof(logstring), "\nOSS: Cleaning up used resources...\nOSS: Message Queue ID %d has been removed at time %d seconds and %d nanoseconds.", messageqid, *osstimeseconds, *osstimenanoseconds+15);
         logmsg(logfilename, logstring);
-        *osstimenanoseconds = *osstimenanoseconds + 15;
     }
 
     else{    

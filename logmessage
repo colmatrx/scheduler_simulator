@@ -347,3 +347,493 @@ OSS: Cleaning up used resources...
 OSS: Message Queue ID 44 has been removed at time 4 seconds and 0 nanoseconds.
 OSS: Process Table Shared Memory ID 851975 has been detached and deleted at time 4 seconds and 15 nanoseconds.
 OSS: OSS Clock Shared Memory ID 851980 has been detached and deleted at time 5 seconds and 30 nanoseconds.
+
+OSS: User Process 61926 created at time 1 second and 0 nanosecond
+OSS: OSS Process 61925 sends time quantum 10 nanoseconds to User Process 61926 at time 2 seconds and 0 nanosecond
+OSS: Error!: Ctrl+C interrupt was received at time 3 seconds and 0 nanoseconds. Aborting User Processes...
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: User Process 61926 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 45 has been removed at time 3 seconds and 0 nanoseconds.
+OSS: Process Table Shared Memory ID 851998 has been detached and deleted at time 3 seconds and 15 nanoseconds.
+OSS: OSS Clock Shared Memory ID 851999 has been detached and deleted at time 4 seconds and 30 nanoseconds.
+OSS: OSS terminating at time 4 seconds and 35 nanseconds.
+
+OSS: User Process 62102 created at time 1 second and 0 nanosecond
+OSS: OSS Process 62101 sends time quantum 10 nanoseconds to User Process 62102 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 62101 receives runtime of 0 nanoseconds from User Process 62102 at time 3 seconds and 2 nanosecond
+OSS: User Process 62102 used only 0 nanoseconds of its time quantum
+OSS: OSS Process 62101 sending time quantum 0 to User Process 62102 at time 4 seconds; 2 nanoseconds
+OSS: Error!: Ctrl+C interrupt was received at time 4 seconds and 2 nanoseconds. Aborting User Processes...
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: User Process 62102 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 46 has been removed at time 4 seconds and 2 nanoseconds.
+OSS: Process Table Shared Memory ID 852000 has been detached and deleted at time 4 seconds and 17 nanoseconds.
+OSS: OSS Clock Shared Memory ID 852001 has been detached and deleted at time 5 seconds and 32 nanoseconds.
+OSS: OSS terminating at time 5 seconds and 37 nanseconds.
+
+OSS: User Process 62386 created at time 1 second and 0 nanosecond
+OSS: OSS Process 62385 sends time quantum 10 nanoseconds to User Process 62386 at time 2 seconds and 0 nanosecond
+
+OSS: User Process 62561 created at time 1 second and 0 nanosecond
+OSS: OSS Process 62560 sends time quantum 10 nanoseconds to User Process 62561 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 62560 receives runtime of 0 nanoseconds from User Process 62561 at time 3 seconds and 8 nanosecond
+OSS: User Process 62561 used only 0 nanoseconds of its time quantum
+OSS: OSS Process 62560 sending time quantum 0 to User Process 62561 at time 4 seconds; 8 nanoseconds
+
+OSS: User Process 62759 created at time 1 second and 0 nanosecond
+OSS: OSS Process 62758 sends time quantum 10 nanoseconds to User Process 62759 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 62758 receives runtime of 0 nanoseconds from User Process 62759 at time 3 seconds and 7 nanosecond
+OSS: User Process 62759 used only 0 nanoseconds of its time quantum
+OSS: OSS Process 62758 sending time quantum 0 to User Process 62759 at time 4 seconds; 7 nanoseconds
+OSS: Error!: Ctrl+C interrupt was received at time 4 seconds and 7 nanoseconds. Aborting User Processes...
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: User Process 62759 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 49 has been removed at time 4 seconds and 7 nanoseconds.
+OSS: Process Table Shared Memory ID 852015 has been detached and deleted at time 4 seconds and 22 nanoseconds.
+OSS: OSS Clock Shared Memory ID 852016 has been detached and deleted at time 5 seconds and 37 nanoseconds.
+OSS: OSS terminating at time 5 seconds and 42 nanseconds.
+
+OSS: User Process 62899 created at time 1 second and 0 nanosecond
+OSS: OSS Process 62897 sends time quantum 10 nanoseconds to User Process 62899 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 62897 receives runtime of 0 nanoseconds from User Process 62899 at time 3 seconds and 6 nanosecond
+OSS: User Process 62899 used only 0 nanoseconds of its time quantum
+OSS: OSS Process 62897 sending time quantum 0 to User Process 62899 at time 4 seconds; 6 nanoseconds
+OSS: Error!: Ctrl+C interrupt was received at time 4 seconds and 6 nanoseconds. Aborting User Processes...
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: User Process 62899 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 50 has been removed at time 4 seconds and 6 nanoseconds.
+OSS: Process Table Shared Memory ID 852017 has been detached and deleted at time 4 seconds and 21 nanoseconds.
+OSS: OSS Clock Shared Memory ID 852018 has been detached and deleted at time 5 seconds and 36 nanoseconds.
+OSS: OSS terminating at time 5 seconds and 41 nanseconds.
+
+OSS: User Process 63341 created at time 1 second and 0 nanosecond
+OSS: OSS Process 63340 sends time quantum 10 nanoseconds to User Process 63341 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 63340 receives runtime of 2 nanoseconds from User Process 63341 at time 3 seconds and 2 nanosecond
+OSS: User Process 63341 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: OSS Process 63340 sending time quantum 10 to User Process 63341 at time 4 seconds; 2 nanoseconds
+OSS: OSS Process 63340 receives runtime of 4 nanoseconds from User Process 63341 at time 4 seconds and 6 nanosecond
+OSS: User Process 63341 used only 4 nanoseconds of its time quantum
+OSS: OSS Process 63340 sending time quantum 0 to User Process 63341 at time 5 seconds; 6 nanoseconds
+OSS: Error!: Ctrl+C interrupt was received at time 5 seconds and 6 nanoseconds. Aborting User Processes...
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: User Process 63341 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 51 has been removed at time 5 seconds and 6 nanoseconds.
+OSS: Process Table Shared Memory ID 884773 has been detached and deleted at time 5 seconds and 21 nanoseconds.
+OSS: OSS Clock Shared Memory ID 884774 has been detached and deleted at time 6 seconds and 36 nanoseconds.
+OSS: OSS terminating at time 6 seconds and 41 nanseconds.
+
+OSS: User Process 63649 created at time 1 second and 0 nanosecond
+OSS: OSS Process 63648 sends time quantum 10 nanoseconds to User Process 63649 at time 2 seconds and 0 nanosecond
+OSS: Error!: Ctrl+C interrupt was received at time 3 seconds and 0 nanoseconds. Aborting User Processes...
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: User Process 63649 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 52 has been removed at time 3 seconds and 0 nanoseconds.
+OSS: Process Table Shared Memory ID 884781 has been detached and deleted at time 3 seconds and 15 nanoseconds.
+OSS: OSS Clock Shared Memory ID 884782 has been detached and deleted at time 4 seconds and 30 nanoseconds.
+OSS: OSS terminating at time 4 seconds and 35 nanseconds.
+
+OSS: User Process 63872 created at time 1 second and 0 nanosecond
+OSS: OSS Process 63871 sends time quantum 10 nanoseconds to User Process 63872 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 63871 receives runtime of 0 nanoseconds from User Process 63872 at time 3 seconds and 8 nanosecond
+OSS: User Process 63872 used only 8 nanoseconds of its time quantum
+OSS: OSS Process 63871 sending time quantum 0 to User Process 63872 at time 4 seconds; 8 nanoseconds
+OSS: Error!: Ctrl+C interrupt was received at time 4 seconds and 8 nanoseconds. Aborting User Processes...
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: User Process 63872 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 53 has been removed at time 4 seconds and 8 nanoseconds.
+OSS: Process Table Shared Memory ID 884786 has been detached and deleted at time 4 seconds and 23 nanoseconds.
+OSS: OSS Clock Shared Memory ID 884787 has been detached and deleted at time 5 seconds and 38 nanoseconds.
+OSS: OSS terminating at time 5 seconds and 43 nanseconds.
+
+OSS: User Process 64034 created at time 1 second and 0 nanosecond
+OSS: OSS Process 64033 sends time quantum 10 nanoseconds to User Process 64034 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 64033 receives runtime of 0 nanoseconds from User Process 64034 at time 3 seconds and 0 nanosecond
+OSS: OSS Process 64033 sending time quantum 10 to User Process 64034 at time 4 seconds; 0 nanoseconds
+OSS: OSS Process 64033 receives runtime of 0 nanoseconds from User Process 64034 at time 4 seconds and 2 nanosecond
+OSS: User Process 64034 used only 2 nanoseconds of its time quantum
+OSS: OSS Process 64033 sending time quantum 0 to User Process 64034 at time 5 seconds; 2 nanoseconds
+OSS: Error!: Ctrl+C interrupt was received at time 5 seconds and 2 nanoseconds. Aborting User Processes...
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: User Process 64034 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 54 has been removed at time 5 seconds and 2 nanoseconds.
+OSS: Process Table Shared Memory ID 917508 has been detached and deleted at time 5 seconds and 17 nanoseconds.
+OSS: OSS Clock Shared Memory ID 917511 has been detached and deleted at time 6 seconds and 32 nanoseconds.
+OSS: OSS terminating at time 6 seconds and 37 nanseconds.
+
+OSS: User Process 64235 created at time 1 second and 0 nanosecond
+OSS: OSS Process 64234 sends time quantum 10 nanoseconds to User Process 64235 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 64234 receives runtime of 0 nanoseconds from User Process 64235 at time 3 seconds and 0 nanosecond
+OSS: OSS Process 64234 sending time quantum 10 to User Process 64235 at time 4 seconds; 0 nanoseconds
+OSS: OSS Process 64234 receives runtime of 3 nanoseconds from User Process 64235 at time 4 seconds and 3 nanosecond
+OSS: User Process 64235 used only 3 nanoseconds of its time quantum
+OSS: OSS Process 64234 sending time quantum 0 to User Process 64235 at time 5 seconds; 3 nanoseconds
+OSS: Error!: Ctrl+C interrupt was received at time 5 seconds and 3 nanoseconds. Aborting User Processes...
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: User Process 64235 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 55 has been removed at time 5 seconds and 3 nanoseconds.
+OSS: Process Table Shared Memory ID 917524 has been detached and deleted at time 5 seconds and 18 nanoseconds.
+OSS: OSS Clock Shared Memory ID 917527 has been detached and deleted at time 6 seconds and 33 nanoseconds.
+OSS: OSS terminating at time 6 seconds and 38 nanseconds.
+
+OSS: User Process 64533 created at time 1 second and 0 nanosecond
+OSS: OSS Process 64532 sends time quantum 10 nanoseconds to User Process 64533 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 64532 receives runtime of 8 nanoseconds from User Process 64533 at time 3 seconds and 8 nanosecond
+OSS: User Process 64533 used only 8 nanoseconds of its time quantum
+OSS: OSS Process 64532 sending time quantum 0 to User Process 64533 at time 4 seconds; 8 nanoseconds
+OSS: Error!: Ctrl+C interrupt was received at time 4 seconds and 8 nanoseconds. Aborting User Processes...
+OSS: User Process 64533 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 56 has been removed at time 4 seconds and 8 nanoseconds.
+OSS: Process Table Shared Memory ID 917534 has been detached and deleted at time 4 seconds and 23 nanoseconds.
+OSS: OSS Clock Shared Memory ID 917535 has been detached and deleted at time 5 seconds and 38 nanoseconds.
+OSS: OSS terminating at time 5 seconds and 43 nanseconds.
+
+OSS: User Process 64823 created at time 1 second and 0 nanosecond
+OSS: OSS Process 64822 sends time quantum 10 nanoseconds to User Process 64823 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 64822 receives runtime of 0 nanoseconds from User Process 64823 at time 3 seconds and 0 nanosecond
+OSS: OSS Process 64822 sending time quantum 10 to User Process 64823 at time 4 seconds; 0 nanoseconds
+OSS: OSS Process 64822 receives runtime of 2 nanoseconds from User Process 64823 at time 4 seconds and 2 nanosecond
+OSS: User Process 64823 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: OSS Process 64822 sending time quantum 10 to User Process 64823 at time 5 seconds; 2 nanoseconds
+OSS: OSS Process 64822 receives runtime of 8 nanoseconds from User Process 64823 at time 5 seconds and 10 nanosecond
+OSS: User Process 64823 used only 8 nanoseconds of its time quantum
+OSS: OSS Process 64822 sending time quantum 0 to User Process 64823 at time 6 seconds; 10 nanoseconds
+OSS: OSS Process 64822 receives runtime of 8 nanoseconds from User Process 64823 at time 6 seconds and 18 nanosecond
+OSS: User Process 64823 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: OSS Process 64822 sending time quantum 10 to User Process 64823 at time 7 seconds; 18 nanoseconds
+OSS: OSS Process 64822 receives runtime of 10 nanoseconds from User Process 64823 at time 7 seconds and 28 nanosecond
+OSS: User Process 64823 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: OSS Process 64822 sending time quantum 10 to User Process 64823 at time 8 seconds; 28 nanoseconds
+OSS: OSS Process 64822 receives runtime of 9 nanoseconds from User Process 64823 at time 8 seconds and 37 nanosecond
+OSS: User Process 64823 used only 9 nanoseconds of its time quantum
+OSS: OSS Process 64822 sending time quantum 0 to User Process 64823 at time 9 seconds; 37 nanoseconds
+OSS: Error!: Ctrl+C interrupt was received at time 9 seconds and 37 nanoseconds. Aborting User Processes...
+OSS: User Process 64823 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 57 has been removed at time 9 seconds and 37 nanoseconds.
+OSS: Process Table Shared Memory ID 917536 has been detached and deleted at time 9 seconds and 52 nanoseconds.
+OSS: OSS Clock Shared Memory ID 917537 has been detached and deleted at time 10 seconds and 67 nanoseconds.
+OSS: OSS terminating at time 10 seconds and 72 nanseconds.
+
+OSS: User Process 65706 created at time 1 second and 0 nanosecond
+OSS: OSS Process 65705 sends time quantum 10 nanoseconds to User Process 65706 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 65705 sending time quantum 10 to User Process 65706 at time 4 seconds; 35 nanoseconds
+OSS: User Process 65706 ran for 7 nanoseconds at time 4 seconds and 7 nanosecond
+OSS: User Process 65706 used only part of its time quantum; will get 3 at the next run
+OSS: OSS Process 65705 sending time quantum 3 to User Process 65706 at time 5 seconds; 42 nanoseconds
+OSS: User Process 65706 ran for 2 nanoseconds at time 5 seconds and 9 nanosecond
+OSS: User Process 65706 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: OSS Process 65705 sending time quantum 10 to User Process 65706 at time 6 seconds; 44 nanoseconds
+OSS: User Process 65706 ran for 4 nanoseconds at time 6 seconds and 13 nanosecond
+OSS: User Process 65706 used only part of its time quantum; will get 6 at the next run
+OSS: OSS Process 65705 sending time quantum 6 to User Process 65706 at time 7 seconds; 48 nanoseconds
+OSS: User Process 65706 ran for 3 nanoseconds at time 7 seconds and 16 nanosecond
+OSS: User Process 65706 used only part of its time quantum; will get 3 at the next run
+OSS: OSS Process 65705 sending time quantum 3 to User Process 65706 at time 8 seconds; 51 nanoseconds
+OSS: OSS Process 65705 sending time quantum 3 to User Process 65706 at time 9 seconds; 54 nanoseconds
+OSS: User Process 65706 ran for 3 nanoseconds at time 9 seconds and 22 nanosecond
+OSS: User Process 65706 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: OSS Process 65705 sending time quantum 10 to User Process 65706 at time 10 seconds; 57 nanoseconds
+OSS: User Process 65706 ran for 10 nanoseconds at time 10 seconds and 32 nanosecond
+OSS: User Process 65706 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: OSS Process 65705 sending time quantum 10 to User Process 65706 at time 11 seconds; 67 nanoseconds
+OSS: User Process 65706 ran for 10 nanoseconds at time 11 seconds and 42 nanosecond
+OSS: User Process 65706 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: OSS Process 65705 sending time quantum 10 to User Process 65706 at time 12 seconds; 77 nanoseconds
+OSS: User Process 65706 ran for 6 nanoseconds at time 12 seconds and 48 nanosecond
+OSS: User Process 65706 used only part of its time quantum; will get 4 at the next run
+OSS: OSS Process 65705 sending time quantum 4 to User Process 65706 at time 13 seconds; 83 nanoseconds
+OSS: User Process 65706 ran for 2 nanoseconds at time 13 seconds and 50 nanosecond
+OSS: User Process 65706 used only part of its time quantum; will get 2 at the next run
+OSS: OSS Process 65705 sending time quantum 2 to User Process 65706 at time 14 seconds; 85 nanoseconds
+OSS: User Process 65706 ran for 2 nanoseconds at time 14 seconds and 52 nanosecond
+OSS: User Process 65706 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: OSS Process 65705 sending time quantum 10 to User Process 65706 at time 15 seconds; 87 nanoseconds
+OSS: User Process 65706 ran for 5 nanoseconds at time 15 seconds and 57 nanosecond
+OSS: User Process 65706 used only part of its time quantum; will get 5 at the next run
+OSS: OSS Process 65705 sending time quantum 5 to User Process 65706 at time 16 seconds; 92 nanoseconds
+OSS: User Process 65706 ran for 5 nanoseconds at time 16 seconds and 62 nanosecond
+OSS: User Process 65706 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: OSS Process 65705 sending time quantum 10 to User Process 65706 at time 17 seconds; 97 nanoseconds
+OSS: User Process 65706 ran for 8 nanoseconds at time 17 seconds and 70 nanosecond
+OSS: User Process 65706 used only part of its time quantum; will get 2 at the next run
+OSS: OSS Process 65705 sending time quantum 2 to User Process 65706 at time 18 seconds; 105 nanoseconds
+OSS: Error!: Ctrl+C interrupt was received at time 18 seconds and 70 nanoseconds. Aborting User Processes...
+OSS: User Process 65706 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 58 has been removed at time 18 seconds and 70 nanoseconds.
+OSS: Process Table Shared Memory ID 917555 has been detached and deleted at time 18 seconds and 85 nanoseconds.
+OSS: OSS Clock Shared Memory ID 917556 has been detached and deleted at time 19 seconds and 100 nanoseconds.
+OSS: OSS terminating at time 19 seconds and 105 nanseconds.
+
+OSS: User Process 66176 created at time 1 second and 0 nanosecond
+OSS: OSS Process 66175 sends time quantum 10 nanoseconds to User Process 66176 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 66175 sending time quantum 10 to User Process 66176 at time 4 seconds; 35 nanoseconds
+OSS: User Process 66176 ran for 1 nanoseconds at time 4 seconds and 0 nanosecond
+OSS: User Process 66176 completed execution at time 4 seconds; 1 nanoseconds
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 59 has been removed at time 4 seconds and 0 nanoseconds.
+OSS: Process Table Shared Memory ID 950276 has been detached and deleted at time 4 seconds and 15 nanoseconds.
+OSS: OSS Clock Shared Memory ID 950279 has been detached and deleted at time 5 seconds and 30 nanoseconds.
+OSS: OSS successfully completed execution at time 5 seconds and 30 nanseconds.
+
+OSS: User Process 66612 created at time 1 second and 0 nanosecond
+OSS: OSS Process 66611 sends time quantum 10 nanoseconds to User Process 66612 at time 2 seconds and 0 nanosecond
+OSS: OSS Process 66611 sending time quantum 10 to User Process 66612 at time 3 seconds; 35 nanoseconds
+OSS: User Process 66612 ran for 1 nanoseconds at time 3 seconds and 0 nanosecond
+OSS: User Process 66612 completed execution at time 3 seconds; 1 nanoseconds
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 60 has been removed at time 3 seconds and 0 nanoseconds.
+OSS: Process Table Shared Memory ID 950306 has been detached and deleted at time 3 seconds and 15 nanoseconds.
+OSS: OSS Clock Shared Memory ID 950307 has been detached and deleted at time 4 seconds and 30 nanoseconds.
+OSS: OSS successfully completed execution at time 4 seconds and 30 nanseconds.
+
+OSS: User Process 66813 created at time 1 second and 0 nanosecond
+OSS: OSS Process 66812 sends time quantum 10 nanoseconds to User Process 66813 at time 2 seconds and 0 nanosecond
+OSS: User Process 66813 ran for 3 nanoseconds at time 2 seconds and 3 nanosecond
+OSS: User Process 66813 used only part of its time quantum; will get 7 at the next run
+OSS: User Process 66813 ran for 6 nanoseconds at time 3 seconds and 9 nanosecond
+OSS: User Process 66813 used only part of its time quantum; will get 1 at the next run
+OSS: User Process 66813 ran for 1 nanoseconds at time 4 seconds and 9 nanosecond
+OSS: User Process 66813 completed execution at time 4 seconds; 10 nanoseconds
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 61 has been removed at time 4 seconds and 9 nanoseconds.
+OSS: Process Table Shared Memory ID 950308 has been detached and deleted at time 4 seconds and 24 nanoseconds.
+OSS: OSS Clock Shared Memory ID 950309 has been detached and deleted at time 5 seconds and 39 nanoseconds.
+OSS: OSS successfully completed execution at time 5 seconds and 39 nanseconds.
+
+OSS: User Process 66898 created at time 1 second and 0 nanosecond
+OSS: OSS Process 66897 sends time quantum 10 nanoseconds to User Process 66898 at time 2 seconds and 0 nanosecond
+OSS: User Process 66898 ran for 10 nanoseconds at time 3 seconds and 10 nanosecond
+OSS: User Process 66898 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: User Process 66898 ran for 2 nanoseconds at time 4 seconds and 12 nanosecond
+OSS: User Process 66898 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: User Process 66898 ran for 3 nanoseconds at time 5 seconds and 15 nanosecond
+OSS: User Process 66898 used only part of its time quantum; will get 7 at the next run
+OSS: User Process 66898 ran for 2 nanoseconds at time 6 seconds and 17 nanosecond
+OSS: User Process 66898 used only part of its time quantum; will get 5 at the next run
+OSS: User Process 66898 ran for 3 nanoseconds at time 7 seconds and 20 nanosecond
+OSS: User Process 66898 used only part of its time quantum; will get 2 at the next run
+OSS: User Process 66898 ran for 3 nanoseconds at time 8 seconds and 23 nanosecond
+OSS: User Process 66898 used only part of its time quantum; will get -1 at the next run
+OSS: User Process 66898 ran for 1 nanoseconds at time 9 seconds and 23 nanosecond
+OSS: User Process 66898 completed execution at time 9 seconds; 24 nanoseconds
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 62 has been removed at time 9 seconds and 23 nanoseconds.
+OSS: Process Table Shared Memory ID 950310 has been detached and deleted at time 9 seconds and 38 nanoseconds.
+OSS: OSS Clock Shared Memory ID 950311 has been detached and deleted at time 10 seconds and 53 nanoseconds.
+OSS: OSS successfully completed execution at time 10 seconds and 53 nanseconds.
+
+OSS: User Process 67328 created at time 1 second and 0 nanosecond
+OSS: OSS Process 67327 sends time quantum 10 nanoseconds to User Process 67328 at time 2 seconds and 0 nanosecond
+OSS: User Process 67328 ran for 10 nanoseconds at time 2 seconds and 10 nanosecond
+OSS: User Process 67328 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: User Process 67328 ran for 4 nanoseconds at time 3 seconds and 14 nanosecond
+OSS: User Process 67328 used only part of its time quantum; it is considered block; will get 6 nanoseconds at the next run
+OSS: Error!: Ctrl+C interrupt was received at time 10 seconds and 14 nanoseconds. Aborting User Processes...
+OSS: User Process 67328 terminated
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 63 has been removed at time 10 seconds and 14 nanoseconds.
+OSS: Process Table Shared Memory ID 950312 has been detached and deleted at time 10 seconds and 29 nanoseconds.
+OSS: OSS Clock Shared Memory ID 950313 has been detached and deleted at time 11 seconds and 44 nanoseconds.
+OSS: OSS terminating at time 11 seconds and 49 nanseconds.
+
+OSS: User Process 67518 created at time 1 second and 0 nanosecond
+OSS: OSS Process 67517 sends time quantum 10 nanoseconds to User Process 67518 at time 2 seconds and 0 nanosecond
+OSS: User Process 67518 ran for 5 nanoseconds at time 2 seconds and 5 nanosecond
+OSS: User Process 67518 used only part of its time quantum; it is considered block; will get 5 nanoseconds at the next run
+OSS: User Process 67518 ran for 5 nanoseconds at time 8 seconds and 10 nanosecond
+OSS: User Process 67518 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: User Process 67518 ran for 10 nanoseconds at time 9 seconds and 20 nanosecond
+OSS: User Process 67518 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: User Process 67518 ran for 4 nanoseconds at time 10 seconds and 24 nanosecond
+OSS: User Process 67518 used only part of its time quantum; it is considered block; will get 6 nanoseconds at the next run
+OSS: User Process 67518 ran for 2 nanoseconds at time 17 seconds and 26 nanosecond
+OSS: User Process 67518 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: User Process 67518 ran for 8 nanoseconds at time 18 seconds and 34 nanosecond
+OSS: User Process 67518 used only part of its time quantum; it is considered block; will get 2 nanoseconds at the next run
+OSS: User Process 67518 ran for 1 nanoseconds at time 21 seconds and 34 nanosecond
+OSS: User Process 67518 completed execution at time 21 seconds; 35 nanoseconds
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 32768 has been removed at time 21 seconds and 34 nanoseconds.
+OSS: Process Table Shared Memory ID 950320 has been detached and deleted at time 21 seconds and 49 nanoseconds.
+OSS: OSS Clock Shared Memory ID 950321 has been detached and deleted at time 22 seconds and 64 nanoseconds.
+OSS: OSS successfully completed execution at time 22 seconds and 64 nanseconds.
+
+OSS: User Process 68122 created at time 1 second and 0 nanosecond
+OSS: OSS Process 68121 sends time quantum 10 nanoseconds to User Process 68122 at time 2 seconds and 0 nanosecond
+OSS: User Process 68122 ran for 8 nanoseconds at time 2 seconds and 16 nanosecond
+OSS: User Process 68122 used only part of its time quantum; it is considered block; will get 2 nanoseconds at the next run
+OSS: User Process 68122 ran for 1 nanoseconds at time 5 seconds and 8 nanosecond
+OSS: User Process 68122 completed execution at time 5 seconds; 9 nanoseconds
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 32769 has been removed at time 5 seconds and 8 nanoseconds.
+OSS: Process Table Shared Memory ID 950322 has been detached and deleted at time 5 seconds and 23 nanoseconds.
+OSS: OSS Clock Shared Memory ID 950323 has been detached and deleted at time 6 seconds and 38 nanoseconds.
+OSS: OSS successfully completed execution at time 6 seconds and 38 nanseconds.
+
+OSS: User Process 68313 created at time 1 second and 0 nanosecond
+OSS: OSS Process 68312 sends time quantum 10 nanoseconds to User Process 68313 at time 2 seconds and 0 nanosecond
+OSS: User Process 68313 ran for 10 nanoseconds at time 2 seconds and 20 nanosecond
+OSS: User Process 68313 used all its time quantum; will get all 10 nanoseconds at the next run
+OSS: User Process 68313 ran for 9 nanoseconds at time 3 seconds and 28 nanosecond
+OSS: User Process 68313 used only part of its time quantum; it is considered block; will get 1 nanoseconds at the next run
+OSS: User Process 68313 ran for 1 nanoseconds at time 5 seconds and 19 nanosecond
+OSS: User Process 68313 completed execution at time 5 seconds; 20 nanoseconds
+OSS: Cleaning up used resources...
+OSS: Message Queue ID 32770 has been removed at time 5 seconds and 19 nanoseconds.
+OSS: Process Table Shared Memory ID 950329 has been detached and deleted at time 5 seconds and 34 nanoseconds.
+OSS: OSS Clock Shared Memory ID 950330 has been detached and deleted at time 6 seconds and 49 nanoseconds.
+OSS: OSS successfully completed execution at time 6 seconds and 49 nanseconds.
